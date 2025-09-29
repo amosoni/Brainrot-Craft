@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainrot Craft Logo Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .logo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .logo-item {
+            text-align: center;
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #7c3aed;
+        }
+        .logo-title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #7c3aed;
+        }
+        canvas {
+            border: 1px solid #444;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        .download-btn {
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background: #6d28d9;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #7c3aed;">Brainrot Craft Logo Generator</h1>
+    <p style="text-align: center; color: #ccc;">Pixel art style logos for brainrotcraft.live</p>
+    
+    <div class="logo-container">
+        <!-- Logo 1: Brainrot Character -->
+        <div class="logo-item">
+            <div class="logo-title">Brainrot Character Logo</div>
+            <canvas id="logo1" width="64" height="64"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadLogo('logo1', 'brainrot-character-logo')">Download</button>
+        </div>
+        
+        <!-- Logo 2: Craft Machine -->
+        <div class="logo-item">
+            <div class="logo-title">Craft Machine Logo</div>
+            <canvas id="logo2" width="64" height="64"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadLogo('logo2', 'craft-machine-logo')">Download</button>
+        </div>
+        
+        <!-- Logo 3: Brainrot Block -->
+        <div class="logo-item">
+            <div class="logo-title">Brainrot Block Logo</div>
+            <canvas id="logo3" width="64" height="64"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadLogo('logo3', 'brainrot-block-logo')">Download</button>
+        </div>
+        
+        <!-- Logo 4: Papercraft Style -->
+        <div class="logo-item">
+            <div class="logo-title">Papercraft Style Logo</div>
+            <canvas id="logo4" width="64" height="64"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadLogo('logo4', 'papercraft-style-logo')">Download</button>
+        </div>
+    </div>
+
+    <script>
+        // Logo 1: Brainrot Character (inspired by the shark style)
+        function drawBrainrotCharacter(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = 64;
+            
+            // Background
+            ctx.fillStyle = '#ff6b35'; // Orange background like the shark
+            ctx.fillRect(0, 0, size, size);
+            
+            // Brainrot character body (blue like shark)
+            ctx.fillStyle = '#4a90e2';
+            ctx.fillRect(16, 20, 32, 24);
+            
+            // Head
+            ctx.fillStyle = '#4a90e2';
+            ctx.fillRect(20, 16, 24, 16);
+            
+            // Eyes
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(24, 20, 4, 4);
+            ctx.fillRect(32, 20, 4, 4);
+            
+            // Eye pupils
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(25, 21, 2, 2);
+            ctx.fillRect(33, 21, 2, 2);
+            
+            // Smile
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(26, 28, 12, 2);
+            
+            // Brainrot details (pixelated brain pattern)
+            ctx.fillStyle = '#6bb6ff';
+            ctx.fillRect(18, 22, 2, 2);
+            ctx.fillRect(22, 24, 2, 2);
+            ctx.fillRect(30, 24, 2, 2);
+            ctx.fillRect(34, 22, 2, 2);
+            
+            // Outline
+            ctx.strokeStyle = '#2c5aa0';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(16, 16, 32, 32);
+        }
+        
+        // Logo 2: Craft Machine
+        function drawCraftMachine(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = 64;
+            
+            // Background
+            ctx.fillStyle = '#2d3748';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Machine body
+            ctx.fillStyle = '#4a5568';
+            ctx.fillRect(12, 16, 40, 32);
+            
+            // Machine top
+            ctx.fillStyle = '#2d3748';
+            ctx.fillRect(16, 12, 32, 8);
+            
+            // Crafting slots
+            ctx.fillStyle = '#1a202c';
+            ctx.fillRect(20, 20, 8, 8);
+            ctx.fillRect(32, 20, 8, 8);
+            ctx.fillRect(20, 32, 8, 8);
+            ctx.fillRect(32, 32, 8, 8);
+            
+            // Output slot
+            ctx.fillStyle = '#68d391';
+            ctx.fillRect(44, 24, 8, 8);
+            
+            // Control panel
+            ctx.fillStyle = '#e53e3e';
+            ctx.fillRect(18, 44, 4, 4);
+            ctx.fillRect(24, 44, 4, 4);
+            ctx.fillRect(30, 44, 4, 4);
+            
+            // Outline
+            ctx.strokeStyle = '#1a202c';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(12, 12, 40, 40);
+        }
+        
+        // Logo 3: Brainrot Block
+        function drawBrainrotBlock(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = 64;
+            
+            // Background
+            ctx.fillStyle = '#7c3aed';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Block base
+            ctx.fillStyle = '#8b5cf6';
+            ctx.fillRect(8, 8, 48, 48);
+            
+            // 3D effect - top face
+            ctx.fillStyle = '#a78bfa';
+            ctx.fillRect(8, 8, 48, 8);
+            
+            // 3D effect - left face
+            ctx.fillStyle = '#6d28d9';
+            ctx.fillRect(8, 8, 8, 48);
+            
+            // Brainrot pattern
+            ctx.fillStyle = '#c4b5fd';
+            for(let i = 0; i < 6; i++) {
+                for(let j = 0; j < 6; j++) {
+                    if((i + j) % 2 === 0) {
+                        ctx.fillRect(12 + i * 6, 12 + j * 6, 4, 4);
+                    }
+                }
+            }
+            
+            // Highlight
+            ctx.fillStyle = '#ddd6fe';
+            ctx.fillRect(12, 12, 4, 4);
+            ctx.fillRect(20, 16, 4, 4);
+            ctx.fillRect(28, 20, 4, 4);
+            
+            // Outline
+            ctx.strokeStyle = '#5b21b6';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(8, 8, 48, 48);
+        }
+        
+        // Logo 4: Papercraft Style
+        function drawPapercraftStyle(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = 64;
+            
+            // Background
+            ctx.fillStyle = '#fbbf24';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Paper texture
+            ctx.fillStyle = '#f59e0b';
+            for(let i = 0; i < 8; i++) {
+                for(let j = 0; j < 8; j++) {
+                    if((i + j) % 2 === 0) {
+                        ctx.fillRect(i * 8, j * 8, 4, 4);
+                    }
+                }
+            }
+            
+            // Papercraft character (simplified)
+            ctx.fillStyle = '#ef4444';
+            ctx.fillRect(20, 16, 24, 32);
+            
+            // Head
+            ctx.fillStyle = '#ef4444';
+            ctx.fillRect(24, 12, 16, 16);
+            
+            // Eyes
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(26, 16, 3, 3);
+            ctx.fillRect(30, 16, 3, 3);
+            
+            // Eye pupils
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(27, 17, 1, 1);
+            ctx.fillRect(31, 17, 1, 1);
+            
+            // Mouth
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(28, 22, 8, 2);
+            
+            // Fold lines (papercraft style)
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(20, 16);
+            ctx.lineTo(44, 16);
+            ctx.moveTo(20, 24);
+            ctx.lineTo(44, 24);
+            ctx.moveTo(20, 32);
+            ctx.lineTo(44, 32);
+            ctx.stroke();
+            
+            // Outline
+            ctx.strokeStyle = '#dc2626';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(20, 12, 24, 36);
+        }
+        
+        // Download function
+        function downloadLogo(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename + '.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Initialize all logos
+        window.onload = function() {
+            drawBrainrotCharacter(document.getElementById('logo1'));
+            drawCraftMachine(document.getElementById('logo2'));
+            drawBrainrotBlock(document.getElementById('logo3'));
+            drawPapercraftStyle(document.getElementById('logo4'));
+        };
+    </script>
+</body>
+</html>

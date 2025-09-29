@@ -1,0 +1,51 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#ff6b35"/>
+  
+  <!-- Brainrot Character Body -->
+  <rect x="32" y="40" width="64" height="48" fill="#4a90e2"/>
+  
+  <!-- Head -->
+  <rect x="40" y="32" width="48" height="32" fill="#4a90e2"/>
+  
+  <!-- Eyes -->
+  <rect x="48" y="40" width="8" height="8" fill="#ffffff"/>
+  <rect x="64" y="40" width="8" height="8" fill="#ffffff"/>
+  
+  <!-- Eye pupils -->
+  <rect x="50" y="42" width="4" height="4" fill="#000000"/>
+  <rect x="66" y="42" width="4" height="4" fill="#000000"/>
+  
+  <!-- Eye highlights -->
+  <rect x="52" y="44" width="2" height="2" fill="#ffffff"/>
+  <rect x="68" y="44" width="2" height="2" fill="#ffffff"/>
+  
+  <!-- Smile -->
+  <rect x="52" y="56" width="24" height="4" fill="#000000"/>
+  
+  <!-- Brainrot details (pixelated brain pattern) -->
+  <rect x="36" y="44" width="4" height="4" fill="#6bb6ff"/>
+  <rect x="44" y="48" width="4" height="4" fill="#6bb6ff"/>
+  <rect x="60" y="48" width="4" height="4" fill="#6bb6ff"/>
+  <rect x="68" y="44" width="4" height="4" fill="#6bb6ff"/>
+  <rect x="40" y="52" width="4" height="4" fill="#6bb6ff"/>
+  <rect x="48" y="56" width="4" height="4" fill="#6bb6ff"/>
+  <rect x="64" y="56" width="4" height="4" fill="#6bb6ff"/>
+  <rect x="72" y="52" width="4" height="4" fill="#6bb6ff"/>
+  
+  <!-- Craft elements -->
+  <rect x="20" y="80" width="8" height="8" fill="#8b5cf6"/>
+  <rect x="100" y="80" width="8" height="8" fill="#8b5cf6"/>
+  <rect x="20" y="100" width="8" height="8" fill="#8b5cf6"/>
+  <rect x="100" y="100" width="8" height="8" fill="#8b5cf6"/>
+  
+  <!-- Craft machine in center -->
+  <rect x="56" y="88" width="16" height="16" fill="#4a5568"/>
+  <rect x="60" y="92" width="4" height="4" fill="#68d391"/>
+  
+  <!-- Outline -->
+  <rect x="32" y="32" width="64" height="64" fill="none" stroke="#2c5aa0" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="64" y="110" text-anchor="middle" font-family="monospace" font-size="12" fill="#2c5aa0" font-weight="bold">BRAINROT CRAFT</text>
+</svg>
